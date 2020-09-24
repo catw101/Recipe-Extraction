@@ -1,4 +1,4 @@
-# COMS4995 Open Source Development
+# Grocery Shopping Application
 
 ![GitHub](https://img.shields.io/github/license/catw101/COMS4995)
 
