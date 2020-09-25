@@ -1,6 +1,6 @@
 # Grocery Shopping Application
 
-![GitHub](https://img.shields.io/github/license/catw101/Grocery-Shopping-Application&style=plastic)
+![GitHub](https://img.shields.io/github/license/catw101/Grocery-Shopping-Application?style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues/catw101/Grocery-Shopping-Application?color=%239aabe3&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/catw101/Grocery-Shopping-Application?color=%23ffbafe&style=plastic)
 
