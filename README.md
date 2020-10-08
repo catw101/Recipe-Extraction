@@ -3,7 +3,6 @@
 ![GitHub](https://img.shields.io/github/license/catw101/Grocery-Shopping-Application?style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues/catw101/Grocery-Shopping-Application?color=%239aabe3&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/catw101/Grocery-Shopping-Application?color=%23ffbafe&style=plastic)
-![Python application](https://github.com/catw101/Recipe-Extraction/workflows/Python%20application/badge.svg?event=push)
 ![Travis (.com)](https://img.shields.io/travis/com/catw101/Recipe-Extraction?style=plastic)
 
 ### Concept
