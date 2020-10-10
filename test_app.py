@@ -1,5 +1,8 @@
+import pytest, requests
 from app import index
 
 
+@pytest.fixture
 def test_index():
-    assert index() == "Hello!"
+    test = index()
+    return test
