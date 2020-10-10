@@ -12,6 +12,9 @@ def index():
         site = requests.get(link)
         source = site.content
         soup = BeautifulSoup(source, "lxml")
+        print(link)
+        return "Link " + link
+
     return render_template("index.html")
 
 
