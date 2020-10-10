@@ -13,5 +13,3 @@ install:
 script:
   - pytest
   #- coverage run -m unittest discover
-after-success:
-  - bash <(curl -s https://codecov.io/bash)
