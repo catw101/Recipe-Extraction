@@ -8,6 +8,10 @@ python:
   - "nightly"  # nightly build
 install:
   - pip install -r requirements.txt
+  - pip install coverage
 # command to run tests
 script:
   - pytest
+  - coverage run -m unittest discover
+after-success:
+  - bash <(curl -s https://codecov.io/bash)
