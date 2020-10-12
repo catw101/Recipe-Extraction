@@ -2,12 +2,15 @@
 <html>
     <head>
         <title>Ingredient Extractor</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        <p>Hi!</p>
+        <p id="title">Welcome!</p>
         <form method='POST'>
-            <label for="link">Recipe Link:</label>
-            <input type="text" id="link" name="link" value="{{ request.form.link }}"><br>
+            <div id="link-label">Paste your recipe link below.</div>
+            <input type="text" class="form-control" id="link" name="link" value="{{ request.form.link }}"><br><br>
             <input type="submit" value="Submit">
         </form>
         

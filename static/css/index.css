@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+#title {
+    padding: 5%;
+    font-size: 150%;
+}
+
+#link-label {
+    padding-bottom: 1%;
+    font-size: 90%;
+}
