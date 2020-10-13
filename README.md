@@ -4,8 +4,8 @@
 ![GitHub issues](https://img.shields.io/github/issues/catw101/Grocery-Shopping-Application?color=%239aabe3&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/catw101/Grocery-Shopping-Application?color=%23ffbafe&style=plastic)
 ![Travis (.com)](https://img.shields.io/travis/com/catw101/Recipe-Extraction?style=plastic)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![Codecov](https://img.shields.io/codecov/c/github/catw101/Recipe-Extraction?style=plastic)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
 ### Concept
