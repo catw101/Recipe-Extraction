@@ -3,6 +3,8 @@ attrs==20.2.0
 beautifulsoup4==4.9.1
 click==7.1.2
 colorama==0.4.3
+coverage==5.3
+coverage-badge==1.0.1
 Flask==1.1.2
 importlib-metadata==2.0.0
 iniconfig==1.0.1
