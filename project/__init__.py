@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 from bs4 import BeautifulSoup
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__, instance_relative_config=True)
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -16,9 +16,7 @@ def index():
         return "Link " + link
 
     return render_template("index.html")
+
 @app.route("/link")
 def link_route():
     return render_template("index.html")
-
-if __name__ == "__main__":
-    app.run(debug=True)
