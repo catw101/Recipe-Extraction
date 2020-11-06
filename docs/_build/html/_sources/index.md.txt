@@ -6,6 +6,7 @@
 - 2
 
 ```eval_rst
+   modules
 .. note::
    We can still mix rst.
 ```

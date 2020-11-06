@@ -4,7 +4,6 @@ import requests
 
 app = Flask(__name__)
 
-
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
@@ -13,12 +12,7 @@ def index():
         source = site.content
         soup = BeautifulSoup(source, "lxml")
         print(link)
-        #return "Link " + link
-        ingredients = ""
-        tag = soup.find('div', {'class': 'entry clearfix'})
-        print(tag)
-        #ingredients = ingredients + "\n" + tag.find('ul')
-        #print(ingredients)
+        return "Link " + link
 
     return render_template("index.html")
 @app.route("/link")
