@@ -11,3 +11,6 @@
 
 ### Concept
 This will be either a web application or an extension that extracts ingredients from the recipe(s) link(s) that you provide, searches your online shopping site (Costco, Amazon, etc.) for available items, and adds them to your online shopping cart. There will be several options of how you want items to be added to your list (ex: lowest prices, best deals, highest ratings). This will save you the hassle and time of searching for the best deals on your own. A potential additional feature would be to search on multiple sites and give the best deals overall.
+
+### Personal Site
+Here is my personal website hosted on Github Pages: https://catelenwu.me/
