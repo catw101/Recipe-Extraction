@@ -1,29 +1,50 @@
 from flask import Flask, request, render_template
 from bs4 import BeautifulSoup
-import requests, sys, importlib
+import requests, sys, importlib, re
 from urllib.request import Request, urlopen
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+import spacy
 
 app = Flask(__name__)
 
 importlib.reload(sys)
 sys.getdefaultencoding()
+nlp = spacy.load('de_core_news_sm', disable=['parser', 'tagger', 'ner'])
 
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        link = request.form["link"]
-        response = requests.get(link, headers={'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'})
-        source = response.content
-        soup = BeautifulSoup(source, "lxml")
-        print(soup)
-        #return "Link " + link
-        ingredients = ""
-        tag = soup.find_all('div', {'class': 'entry clearfix'})
-        print(tag)
-        #ingredients = ingredients + "\n" + tag.find('ul')
-        #print(ingredients)
+        #specific to this link at the moment
+        #page = requests.get("https://thecinnaman.com/blog/malaweh-with-scallion-cheddar-cheese")
+        ingredients = []
+        page = requests.get(request.form["link"])
+        #print(page.content)
+        soup = BeautifulSoup(page.content, 'html.parser')
+        #print(soup.prettify())
+        ing = soup.find("h3", text="ingredients:")
+        ing = ing.findNext("ul").find_all("li")
+        for elem in ing:
+            #print(elem.find("p").text) #prints out the ingredients
+            ingredients.append(elem.find("p").text)
+        for ingredient in ingredients:
+            ingredient = re.sub(r'\d+', '', ingredient)
+            ingredient = ingredient.split("(", 1)[0]
+            text_token = word_tokenize(ingredient)
+            tokens_without_sw = [word for word in text_token if not word in stopwords.words()]
+            for token in tokens_without_sw:
+                if len(token) < 3:
+                    tokens_without_sw.remove(token)
+            print(tokens_without_sw)
+         
+        # link = request.form["link"]
+        # response = requests.get(link, headers={'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'})
+        # source = response.content
+        # soup = BeautifulSoup(source, "lxml")
+        # #return "Link " + link
 
     return render_template("index.html")
+
 @app.route("/link")
 def link_route(): 
     return render_template("index.html")
