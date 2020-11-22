@@ -15,3 +15,8 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Screenshots
+===========
+
+.. image:: ./_static/index.jpg
