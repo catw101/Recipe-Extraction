@@ -1,14 +1,20 @@
 body {
     text-align: center;
     font-family: "Raleway", sans-serif;
+    background-image: url("/static/imgs/background.jpg") fixed center;
+    background-color: rgb(252, 220, 225);
 }
 
 #title {
     padding: 5%;
-    font-size: 150%;
+    font-size: 250%;
 }
 
 #link-label {
     padding-bottom: 1%;
-    font-size: 90%;
+    font-size: 150%;
+}
+
+#link {
+    width: 50%;
 }
