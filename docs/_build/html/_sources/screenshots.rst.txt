@@ -4,4 +4,4 @@ Screenshots
 Homepage
 --------
 
-.. image:: ./_static/index.jpg
+.. image:: _static/index.jpg

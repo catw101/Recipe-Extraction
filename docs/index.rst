@@ -6,7 +6,7 @@ Welcome to Recipe Extraction's documentation!
    :caption: Contents:
 
    modules
-
+   screenshots
 
 
 Indices and tables
@@ -15,8 +15,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-Screenshots
-===========
-
-.. image:: ./_static/index.jpg
