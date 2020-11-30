@@ -7,6 +7,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        
+        <p>Here are the ingredients that we extracted:</p>
+        <form method="POST">
+        {%for i in range(0, len)%}
+            <input type="checkbox" id="{{ i }}">
+            <label for="{{ i }}">{{ new_list[i] }}</label>
+            <br/><br/>
+        {% endfor %}
+        </form>
     </body>
 </html>
