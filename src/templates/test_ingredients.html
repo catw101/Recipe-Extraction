@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ingredients</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p>Here are the ingredients that we extracted:</p>
+        <form action="{{ url_for('test_ingredients') }}" method="POST">
+            <input type="checkbox" id="ing1" name="check" value="Almonds">
+            <label for="ing1">Almonds</label><br>
+            <input type="checkbox" id="ing2" name="check" value="Lemons">
+            <label for="ing2">Lemons</label><br>
+            <input type="checkbox" id="ing3" name="check" value="All-purpose flour">
+            <label for="ing3">All-purpose flour</label><br><br>
+            <p>Grocery Shopping Site:</p>
+            <input type="checkbox" id="site1" name="check" value="Costco">
+            <label for="site1">Costco</label><br>
+            <input type="checkbox" id="site2" name="check" value="Amazon">
+            <label for="site2">Amazon</label><br><br>
+            <input type="submit" value="Find">
+        </form>
+    </body>
+</html>

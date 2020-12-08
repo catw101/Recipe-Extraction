@@ -4,6 +4,7 @@ import requests, sys, importlib, re
 from urllib.request import Request, urlopen
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from googlesearch import search
 import spacy
 
 app = Flask(__name__)
@@ -55,10 +56,16 @@ def index():
         # #return "Link " + link
     return render_template("index.html")
 
-""" @app.route("/ingredients")
-def ingredients():
-    print(new_list)
-    return render_template("ingredients.html", new_list = new_list, len = len(new_list)) 
- """
+@app.route("/test_ingredients", methods=["GET", "POST"]) 
+def test_ingredients():
+    if request.method == "POST":
+        # gets checked items in the list
+        checked = request.form.getlist("check")
+        print(checked)
+        for i in range(0, len(checked)-1):
+            for j in search (checked[i]+checked[-1],  tld='com', lang='en', tbs='0', safe='off', num=1, start=0, stop=1, pause=2.0, country='', extra_params=None, user_agent=None):
+                print(j)
+    return render_template("test_ingredients.html") 
+ 
 if __name__ == "__main__":
     app.run(debug=True) 
