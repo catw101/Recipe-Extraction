@@ -5,7 +5,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/catw101/Grocery-Shopping-Application?color=%23ffbafe&style=plastic)
 ![Travis (.com)](https://img.shields.io/travis/com/catw101/Recipe-Extraction?style=plastic)
 ![Codecov](https://img.shields.io/codecov/c/github/catw101/Recipe-Extraction?style=plastic)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![Read the Docs](https://img.shields.io/readthedocs/recipe-extraction?style=plastic)
 
 
