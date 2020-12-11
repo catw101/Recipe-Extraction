@@ -48,7 +48,7 @@ def index():
             new_ingredients.append(tokens_without_sw)
         #return redirect(url_for("ingredients", new_list = new_ingredients, len = len(new_ingredients)))
         #return redirect(url_for("ingredients", new_list = new_ingredients))
-        return render_template("ingredients.html", new_list = new_ingredients, len = len(new_ingredients))
+        return render_template("ingredients.html", new_list = new_ingredients)
         # link = request.form["link"] 
         # response = requests.get(link, headers={'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'})
         # source = response.content
@@ -61,11 +61,14 @@ def test_ingredients():
     if request.method == "POST":
         # gets checked items in the list
         checked = request.form.getlist("check")
+        sites_list = []
         print(checked)
         for i in range(0, len(checked)-1):
-            for j in search (checked[i]+checked[-1],  tld='com', lang='en', tbs='0', safe='off', num=1, start=0, stop=1, pause=2.0, country='', extra_params=None, user_agent=None):
+            for j in search (checked[i]+checked[-1],  tld='com', lang='en', tbs='0', safe='off', num=1, start=0, stop=1, country='', extra_params=None, user_agent=None):
                 print(j)
+                sites_list.append(j)
+        return render_template("sites.html", sites_list=sites_list)
     return render_template("test_ingredients.html") 
- 
+
 if __name__ == "__main__":
     app.run(debug=True) 

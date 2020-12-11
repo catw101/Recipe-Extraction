@@ -9,11 +9,15 @@
     <body>
         <p>Here are the ingredients that we extracted:</p>
         <form method="POST">
-        {%for i in range(0, len)%}
-            <input type="checkbox" id="{{ i }}">
-            <label for="{{ i }}">{{ new_list[i] }}</label>
-            <br/><br/>
-        {% endfor %}
+            {%for i in range(0, len)%}
+                <input type="checkbox" id="{{ i }}">
+                <label for="{{ i }}">{{ new_list[i] }}</label>
+                <br/><br/>
+            {% endfor %}
+            <input type="checkbox" id="site1" name="check" value="Costco">
+            <label for="site1">Costco</label><br>
+            <input type="checkbox" id="site2" name="check" value="Amazon">
+            <label for="site2">Amazon</label><br><br>
         </form>
     </body>
 </html>
