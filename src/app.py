@@ -14,6 +14,8 @@ sys.getdefaultencoding()
 nlp = spacy.load('en_core_web_sm') 
 excluded_tags = {"VERB", "ADJ"}
 
+# Comment for hw0
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
